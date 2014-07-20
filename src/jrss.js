@@ -31,7 +31,8 @@ JRss.prototype  = {
             item.updated = jQuery(this).find('pubDate').eq(0).text();
             item.id = jQuery(this).find('guid').eq(0).text();
             item.enclosure = jQuery(this).find('enclosure').attr('url');
-            
+            item.duration = jQuery(this).find('itunes\\:duration').eq(0).text();
+
             feed.items.push(item);
         });
     }
